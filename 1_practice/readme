@@ -1,0 +1,28 @@
+scalaVersion := "2.11.12"
+sparkVersion = "2.2.1"
+java version "1.8.0_77"
+
+
+***Before start running:
+1. Copy Wanjin_Li_task1.jar
+and  Wanjin_Li_task2.jar from Solution folder into the ‘spark-2.2.1-bin-hadoop2.7’ folder in Finder.
+2. Download reviews_Toys_and_Games_5.json and metadata.json, save their positions as input path.
+3. Save a output path (must be an existed path).
+
+
+***Running in terminal:
+1.First, entry the position of spark-2.2.1-bin-hadoop2.7 in terminal.
+
+2.
+For task 1,
+bin/spark-submit --class task1 Wanjin_Li_task1.jar path_to_/input/reviews_Toys_and_Games_5.json  path_to_/output/Wanjin_Li_task1.csv 
+For task 2,
+bin/spark-submit --class task2 Wanjin_Li_task2.jar path_to_/input/reviews_Toys_and_Games_5.json  path_to_/input/metadata.json  path_to_/output/Wanjin_Li_task2.csv 
+
+[For example]
+ if the json files save in an ‘input’ folder below the ‘spark-2.2.1-bin-hadoop2.7’ folder, and ‘spark-2.2.1-bin-hadoop2.7’ folder has an folder named ‘output’, you run following codes:
+
+bin/spark-submit --class task1 Wanjin_Li_task1.jar input/reviews_Toys_and_Games_5.json  output/Wanjin_Li_task1.csv 
+
+bin/spark-submit --class task2 Wanjin_Li_task2.jar  input/reviews_Toys_and_Games_5.json  input/metadata.json  output/Wanjin_Li_task2.csv 
+
